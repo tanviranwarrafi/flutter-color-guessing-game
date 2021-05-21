@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class Result extends StatelessWidget {
   final int score;
   final int questions;
-
   final Function resetHandler;
 
   Result(this.score, this.questions, this.resetHandler);
@@ -17,29 +15,12 @@ class Result extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Text(
-            'Your score is',
-            style: TextStyle(
-              fontSize: 22.0,
-            ),
-          ),
-          Text(
-            '$score out of $questions',
-            style: TextStyle(
-              fontSize: 22.0,
-            ),
-          ),
+          Text('Your score is', style: TextStyle(fontSize: 22.0)),
+          Text('$score out of $questions', style: TextStyle(fontSize: 22.0)),
           FlatButton(
-              onPressed: () {
-                resetHandler();
-              },
-              child: Text(
-                'RESTART',
-                style: TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ))
+            onPressed: () => resetHandler(),
+            child: Text('RESTART', style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold)),
+          ),
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'dart:math';
-import 'package:color_guessing_game_flutter/color_option.dart';
+
+import 'package:color_guessing_game_flutter/color-option.dart';
 import 'package:flutter/material.dart';
 
 class ColorOptions extends StatelessWidget {
@@ -21,21 +22,9 @@ class ColorOptions extends StatelessWidget {
 
     var randomOptions = {
       answer: {'r': randomR, 'g': randomG, 'b': randomB},
-      optionList[0]: {
-        'r': random.nextInt(256),
-        'g': random.nextInt(256),
-        'b': random.nextInt(256)
-      },
-      optionList[1]: {
-        'r': random.nextInt(256),
-        'g': random.nextInt(256),
-        'b': random.nextInt(256)
-      },
-      optionList[2]: {
-        'r': random.nextInt(256),
-        'g': random.nextInt(256),
-        'b': random.nextInt(256)
-      },
+      optionList[0]: {'r': random.nextInt(256), 'g': random.nextInt(256), 'b': random.nextInt(256)},
+      optionList[1]: {'r': random.nextInt(256), 'g': random.nextInt(256), 'b': random.nextInt(256)},
+      optionList[2]: {'r': random.nextInt(256), 'g': random.nextInt(256), 'b': random.nextInt(256)},
     };
 
     return Column(
