@@ -1,15 +1,9 @@
-import 'package:color_guessing_game_flutter/home-screen.dart';
 import 'package:flutter/material.dart';
+import 'package:tutorial/tutorial_app.dart';
+import 'package:tutorial/utils/app_utils.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: HomeScreen(),
-    );
-  }
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await portraitMode();
+  runApp(TutorialApp());
 }
